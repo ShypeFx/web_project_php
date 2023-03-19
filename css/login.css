@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.formulaire{
+    margin: 0 auto;
+    max-width: 700px;
+    height: 100px;
+    width: 30%;
+    background-color: #ccc;
+    border-radius: 3px;
+    text-align: center;
+    padding: 20px 20px 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.popup_error{
+    margin:0 auto;
+    width: 300px;
+    height: 80px;
+    background-color: rgb(146, 26, 26);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 35px;
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+  }
