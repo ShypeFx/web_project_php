@@ -21,20 +21,9 @@ if( isset($_SESSION['logged-in']) != true) {
             </div>
           </div>
     </header>
-    <main>
-
-    <div class="card">
-        <img src="image.jpg" alt="Image">
-        <div class="card-body">
-            <h3 class="card-title">Card Title</h3>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-    </div>
-
-
-    </main>
 <?php
-echo '<a href="./../php/logout.php">Déconnexion</a>';
+include('cards.html');
+echo '<a href="../../php/logout.php">Déconnexion</a>';
 }
 
 ?>
