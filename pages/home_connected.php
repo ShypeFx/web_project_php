@@ -2,6 +2,7 @@
  <head>
  <meta charset="utf-8">
  <link rel="stylesheet" href="../css/index.css" media="screen" type="text/css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
  </head>
  <body style='background:#fff;'>
  <div id="content">

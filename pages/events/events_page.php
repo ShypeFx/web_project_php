@@ -22,8 +22,7 @@ if( isset($_SESSION['logged-in']) != true) {
           </div>
     </header>
 <?php
-include('cards.html');
-echo '<a href="../../php/logout.php">Déconnexion</a>';
+include('cards.php');
 }
 
 ?>
