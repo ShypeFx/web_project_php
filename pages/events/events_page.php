@@ -1,7 +1,7 @@
 <html>
  <head>
  <meta charset="utf-8">
- <link rel="stylesheet" href="./event.css" media="screen" type="text/css" /> </head>
+ <link rel="stylesheet" href="../../css/event.css" media="screen" type="text/css" /> </head>
  <body style='background:#fff;'>
  <div id="content">
 

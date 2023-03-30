@@ -1,12 +1,8 @@
 <?php
 session_start();
-if(isset($_POST['username']) && isset($_POST['password']))
-{
- // connexion à la base de données
- $db_username = 'tbeaudoin';
- $db_password = 'Projetweb2022';
- $db_name = 'projet_web';
- $db_host = 'db4free.net:3306';
+include('database.php');
+if(isset($_POST['username']) && isset($_POST['password'])){
+
  $db = mysqli_connect($db_host, $db_username, $db_password,$db_name)
  or die('could not connect to database');
 

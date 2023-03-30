@@ -13,7 +13,7 @@
          <a href="./login_page.php"><button> Retour </button></a>
         <h1 style="text-align: center;"> Signup </h1>
         <div class="formulaire">
-            <form action="../php/inscription.php" method="post">
+            <form action="../config/inscription.php" method="post">
                 <p>First name: <input type="text" name="firstname" /></p>
                 <p>Name: <input type="text" name="name" /></p>
                 <p>Username: <input type="text" name="username" /></p>

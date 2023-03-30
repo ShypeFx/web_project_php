@@ -8,24 +8,14 @@
 
 <?php
 session_start();
-
 if( isset($_SESSION['logged-in']) != true) {
     header('Location: ../php/logout.php');
-}else{?>
-
-    <header>
-        <div class="topnav">
-            <a href="./home_connected.php">Accueil</a>
-            <a href="./events/events_page.php">Events</a>
-            <a href="#contact">Contact</a>
-            <div class="co_button">
-                <a class="active" href="./account_page.php">Compte</a>
-            </div>
-          </div>
-    </header>
+}else{
+    include('../lib/header.php');
+    ?>
     <main>
         <?php 
-            include('../php/database.php');
+            include('../config/database.php');
             $sql = "SELECT * FROM user where username = '".$_SESSION['username']."'";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {

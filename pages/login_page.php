@@ -13,7 +13,7 @@
          <a href="../index.php"><button> Retour </button></a>
         <h1 style="text-align: center;"> Login </h1>
         <div class="formulaire">
-            <form action="../php/verification.php" method="post">
+            <form action="../config/verification.php" method="post">
                 <p>Username: <input type="text" name="username" /></p>
                 <p>Password: <input type="password" name="password" /></p>
                 <p><input type="submit" /></p>
