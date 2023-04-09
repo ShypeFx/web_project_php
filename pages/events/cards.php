@@ -21,10 +21,10 @@ if (!empty($product_array)) {
 
     <article class="card">
         <header class="card__title">
-            <h3><?php echo $product_array[$key]["name"]; ?></h3>
+            <h3><?php echo $product_array[$key]["name_event"]; ?></h3>
         </header>
         <figure class="card__thumbnail">
-            <img src="<?php echo $product_array[$key]["image"]; ?>">
+            <img src="<?php echo $product_array[$key]["image_event"]; ?>">
         </figure>
         <main class="card__description">
             <p class="card-text"><i class="bi bi-tags"></i><?php echo " à partir de ".$product_array[$key]["price"] . "€"; ?></p>

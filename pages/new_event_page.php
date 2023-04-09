@@ -22,7 +22,7 @@ if( $_SESSION['role'] != "admin") {
          <a href="./events/events_page.php"><button> Retour </button></a>
         <h1 style="text-align: center;"> Créer un event </h1>
         <div class="formulaire">
-            <form action="../config/inscription.php" method="post">
+            <form action="../config/add_event.php" method="post">
                 <p>Titre : <input type="text" name="title" /></p>
                 <p>City : <input type="text" name="city" /></p>
                 <p>Date :  <input type="date" name="date" /></p>

@@ -18,14 +18,16 @@ if(isset($_POST['username']) && isset($_POST['password'])){
     $count = $reponse['count(*)'];
 
     if($count!=0){
-        $requete = "SELECT role FROM user where username = '".$username."'";
+        $requete = "SELECT role, id_user FROM user where username = '".$username."'";
         $exec_requete = mysqli_query($db,$requete);
         $reponse = mysqli_fetch_array($exec_requete);
         $role = $reponse['role'];
+        $id_user = $reponse['id_user'];
 
         $_SESSION['username'] = $username;
         $_SESSION['logged-in'] = true;
         $_SESSION['role'] = $role;
+        $_SESSION['id_user'] = $id_user;
         header('Location: ../pages/home_connected.php');
     }
     else{
