@@ -8,7 +8,7 @@
 <?php
 session_start();
 if( isset($_SESSION['logged-in']) != true) {
-    header('Location: ../php/logout.php');
+    header('Location: ../config/logout.php');
 }else{
 ?>
     <header>
@@ -22,6 +22,9 @@ if( isset($_SESSION['logged-in']) != true) {
           </div>
     </header>
 <?php
+    if($_SESSION['role'] === "admin"){
+        echo '<a href="../new_event_page.php" class="button_event">Ajouter un évenement</a>';
+    }
 include('cards.php');
 }
 

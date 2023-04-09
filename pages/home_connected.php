@@ -17,6 +17,7 @@ if( isset($_SESSION['logged-in']) != true) {
 
     <main>
     <h1> Bonjour <?php echo $_SESSION['username'] ?></h1>
+    <h1> Role :  <?php echo $_SESSION['role'] ?></h1>
     </main>
 <?php
 echo '<a href="../config/logout.php">Déconnexion</a>';

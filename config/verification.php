@@ -8,7 +8,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 
  $username = mysqli_real_escape_string($db,htmlspecialchars($_POST['username'])); 
  $password = mysqli_real_escape_string($db,htmlspecialchars($_POST['password']));
- 
+
  if($username !== "" && md5($password) !== ""){
 
     $requete = "SELECT count(*) FROM user where 
@@ -18,8 +18,14 @@ if(isset($_POST['username']) && isset($_POST['password'])){
     $count = $reponse['count(*)'];
 
     if($count!=0){
+        $requete = "SELECT role FROM user where username = '".$username."'";
+        $exec_requete = mysqli_query($db,$requete);
+        $reponse = mysqli_fetch_array($exec_requete);
+        $role = $reponse['role'];
+
         $_SESSION['username'] = $username;
         $_SESSION['logged-in'] = true;
+        $_SESSION['role'] = $role;
         header('Location: ../pages/home_connected.php');
     }
     else{
