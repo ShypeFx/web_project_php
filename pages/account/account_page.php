@@ -1,21 +1,31 @@
 <html>
  <head>
  <meta charset="utf-8">
- <link rel="stylesheet" href="../css/index.css" media="screen" type="text/css" />
+ <link rel="stylesheet" href="../../css/index.css" media="screen" type="text/css" />
  </head>
  <body style='background:#fff;'>
  <div id="content">
 
 <?php
 session_start();
+include('../../config/inactive_disconnect.php');
 if( isset($_SESSION['logged-in']) != true) {
-    header('Location: ../php/logout.php');
+    header('Location: ../../config/logout.php');
 }else{
-    include('../lib/header.php');
     ?>
+    <header>
+        <div class="topnav">
+            <a href="../home/home_connected.php">Accueil</a>
+            <a href="../events/events_page.php">Events</a>
+            <a href="#contact">Contact</a>
+            <div class="co_button">
+                <a class="active" href="./account_page.php">Compte</a>
+            </div>
+          </div>
+    </header>
     <main>
         <?php 
-            include('../config/database.php');
+            include('../../config/database.php');
             $sql = "SELECT * FROM user where username = '".$_SESSION['username']."'";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {

@@ -15,7 +15,7 @@
             <a href="#oui">Informations</a>
             <a href="#contact">Contact</a>
             <div class="co_button">
-                <a href="./pages/login_page.php">Connexion</a>
+                <a href="./pages/home/login_page.php">Connexion</a>
             </div>
           </div>
     </header>

@@ -28,16 +28,17 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         $_SESSION['logged-in'] = true;
         $_SESSION['role'] = $role;
         $_SESSION['id_user'] = $id_user;
-        header('Location: ../pages/home_connected.php');
+        $_SESSION['last_activity'] = time();
+        header('Location: ../pages/home/home_connected.php');
     }
     else{
-        header('Location: ../pages/login_page.php?error=1'); // utilisateur ou mot de passe incorrect
+        header('Location: ../pages/home/login_page.php?error=1'); // utilisateur ou mot de passe incorrect
     }
  }
  else{
 
     $msg = "<center><h4>Username or Password are not correct, try again.</center></h4>";
-    header("Location: ../pages/login_page.php?msg=$msg");    
+    header("Location: ../pages/home/login_page.php?msg=$msg");    
 }   
 
 

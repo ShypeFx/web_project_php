@@ -12,7 +12,7 @@ include('database.php');
     
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
-        header('Location: ../pages/login_page.php');
+        header('Location: ../pages/home/login_page.php');
         
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;

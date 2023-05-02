@@ -6,10 +6,10 @@
         unset($_SESSION['logged-in']);
         session_destroy();
         echo "test";
-        header('Location: ../pages/login_page.php');
+        header('Location: ../pages/home/login_page.php');
         exit;
     }else{
-        header('Location: ../pages/login_page.php');
+        header('Location: ../pages/home/login_page.php');
         exit;
     }
 ?>

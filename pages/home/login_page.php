@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../../css/login.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
   </head>
   <body>
     <main>
-         <a href="../index.php"><button> Retour </button></a>
+         <a href="../../index.php"><button> Retour </button></a>
         <h1 style="text-align: center;"> Login </h1>
         <div class="formulaire">
-            <form action="../config/verification.php" method="post">
+            <form action="../../config/verification.php" method="post">
                 <p>Username: <input type="text" name="username" /></p>
                 <p>Password: <input type="password" name="password" /></p>
                 <p><input type="submit" /></p>

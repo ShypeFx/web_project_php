@@ -9,7 +9,10 @@
 
 <section class="card-container">
 
-<?php require_once("../../lib/dbcontroller.php");
+<?php 
+require_once("../../lib/dbcontroller.php");
+include('../../config/inactive_disconnect.php');
+
 $db_handle = new DBController();
 $product_array = $db_handle->runQuery("SELECT * FROM event");
 $index = 0;
@@ -30,11 +33,10 @@ if (!empty($product_array)) {
             <p class="card-text"><i class="bi bi-tags"></i><?php echo " à partir de ".$product_array[$key]["price"] . "€"; ?></p>
             <p class="card-text"><i class="bi bi-geo"></i><?php echo " " .$product_array[$key]["city"];?></p>
         </main>
-        <a href="#" class="button">Accéder aux places</a>
-
+        <form method="POST">
+            <a href="event_informations.php?id_event=<?=$product_array[$key]['id_event']?>" class="button">Accéder aux places</a>
+        </form>
     </article>
-
-
 <?php
     }
 }

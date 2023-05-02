@@ -1,0 +1,16 @@
+.button {
+  display: block;
+  background-color: rgb(0, 255, 106);
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  transition: .3s ease-out;
+  width: 200px;
+}
+
+.image{
+  width: 10%;
+  height: auto;
+}

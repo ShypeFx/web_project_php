@@ -1,8 +1,8 @@
 <?php
 class DBController {
-	private $host = "db4free.net:3306";
-	private $user = "tbeaudoin";
-	private $password = "Projetweb2022";
+	private $host = "localhost";
+	private $user = "root";
+	private $password = "";
 	private $database = "projet_web";
 	private $conn;
 	
