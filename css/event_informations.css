@@ -1,16 +1,111 @@
-.button {
+
+.btn-back {
   display: block;
-  background-color: rgb(0, 255, 106);
-  border-radius: 20px;
+  background-color: rgb(138, 138, 138);
+  border-radius: 15px;
   padding: 10px 20px;
   color: white;
   text-decoration: none;
   text-align: center;
   transition: .3s ease-out;
-  width: 200px;
+  width: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration:none;
 }
 
-.image{
-  width: 10%;
-  height: auto;
+.card {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  width: 90%;
+  height: 60%;
 }
+
+.container {  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 40% 15% 15%;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "."
+    "."
+    "."
+    ".";
+}
+
+
+.card img {
+  height: auto;
+  margin-right: 20px;
+  width: 40%;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.card p {
+  font-size: 16px;
+  margin: 0 0 10px;
+  padding: 1em;
+}
+
+.card strong {
+  font-size: 18px;
+  text-align: right;
+}
+
+.btn-delete {
+  background-color: #ff1100;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: auto;
+  padding: 10px 20px 10px;
+  align-self: flex-end;
+  text-decoration:none;
+}
+
+.btn-update {
+  background-color: #ffb700;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: auto;
+  padding: 10px 20px 10px;
+  align-self: flex-end;
+  float: right;
+  text-decoration:none;
+  margin-right: 10px;
+}
+
+.btn-buy {
+  background-color: #00b7ff;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: auto;
+  padding: 10px 20px 10px;
+  align-self: flex-end;
+  float: right;
+  text-decoration:none;
+  margin-right: 10px;
+}
+

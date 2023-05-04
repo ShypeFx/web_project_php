@@ -11,7 +11,6 @@ include('database.php');
     VALUES ('$name', '$firstname', '$email', '$username', '" .md5($password)."')";
     
     if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
         header('Location: ../pages/home/login_page.php');
         
     } else {

@@ -16,7 +16,7 @@ include('database.php');
     
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
-        header('Location: ../pages/events/events_page.php');
+        header('Location: ../pages/events/events.php');
         
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;

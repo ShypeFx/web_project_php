@@ -1,0 +1,14 @@
+.formulaire{
+    margin: 0 auto;
+    max-width: 700px;
+    height: 15%;
+    width: 30%;
+    background-color: rgb(221, 164, 100);
+    border-radius: 3px;
+    text-align: center;
+    padding: 20px 20px 20px;
+}
+
+html{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

@@ -23,12 +23,13 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         $reponse = mysqli_fetch_array($exec_requete);
         $role = $reponse['role'];
         $id_user = $reponse['id_user'];
-
+        // Put in the session all the informations about the user
         $_SESSION['username'] = $username;
         $_SESSION['logged-in'] = true;
         $_SESSION['role'] = $role;
         $_SESSION['id_user'] = $id_user;
         $_SESSION['last_activity'] = time();
+        
         header('Location: ../pages/home/home_connected.php');
     }
     else{

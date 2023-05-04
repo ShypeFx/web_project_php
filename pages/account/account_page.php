@@ -1,7 +1,8 @@
 <html>
  <head>
  <meta charset="utf-8">
- <link rel="stylesheet" href="../../css/index.css" media="screen" type="text/css" />
+ <link rel="stylesheet" href="../../css/index.css?=<?php echo time(); ?>" media="screen" type="text/css" /> </head>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
  </head>
  <body style='background:#fff;'>
  <div id="content">
@@ -13,16 +14,16 @@ if( isset($_SESSION['logged-in']) != true) {
     header('Location: ../../config/logout.php');
 }else{
     ?>
-    <header>
+ <header>
         <div class="topnav">
-            <a href="../home/home_connected.php">Accueil</a>
-            <a href="../events/events_page.php">Events</a>
-            <a href="#contact">Contact</a>
+            <a  href="../home/home_connected.php" >Home</a>
+            <a href="../events/events.php">Events</a>
+            <a href="#contact">Menu</a>
             <div class="co_button">
-                <a class="active" href="./account_page.php">Compte</a>
+                <a class="active" href="./account_page.php"><i class="bi bi-person-circle fa-2x"></i></a>
             </div>
           </div>
-    </header>
+</header>
     <main>
         <?php 
             include('../../config/database.php');

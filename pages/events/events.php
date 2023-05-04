@@ -1,7 +1,8 @@
 <html>
  <head>
  <meta charset="utf-8">
- <link rel="stylesheet" href="../../css/event.css" media="screen" type="text/css" /> </head>
+ <link rel="stylesheet" href="../../css/index.css?=<?php echo time(); ?>" media="screen" type="text/css" /> </head>
+ <link rel="stylesheet" href="../../css/event.css?=<?php echo time(); ?>" media="screen" type="text/css" /> </head>
  <body style='background:#fff;'>
  <div id="content">
 
@@ -14,16 +15,16 @@ if( isset($_SESSION['logged-in']) != true) {
     header('Location: ../../config/logout.php');
 }else{
 ?>
-    <header>
+ <header>
         <div class="topnav">
-            <a href="../home/home_connected.php">Accueil</a>
-            <a class="active"  href="./events_page.php">Events</a>
-            <a href="#contact">Contact</a>
+            <a href="../home/home_connected.php" >Home</a>
+            <a class="active" href="./events.php">Events</a>
+            <a href="#contact">Menu</a>
             <div class="co_button">
-                <a href="../account/account_page.php">Compte</a>
+                <a href="../account/account_page.php"><i class="bi bi-person-circle fa-2x"></i></a>
             </div>
           </div>
-    </header>
+</header>
 <?php
     if($_SESSION['role'] === "admin"){
         echo '<a href="./new_event_page.php" class="button_event">Ajouter un évenement</a>';

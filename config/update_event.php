@@ -10,11 +10,11 @@
     $stmt->execute([$_GET['id_event']]);
     $product = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($stmt) {
-        header('Location: ../pages/events/events.php?action=deleted');
+    if ($result) {
+        header('Location: ../pages/events/events_informations.php?action=deleted');
         echo 'Event supprimé';
     } else {
-        header('Location: ../pages/events/events.php');
+        header('Location: ../pages/events/events_informations.php?action=deleted');
         }
     }
 

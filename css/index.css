@@ -24,7 +24,7 @@
   }
 
   .co_button{
-    text-align: right;
+    float: right;
   }
 
   * {

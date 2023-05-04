@@ -19,16 +19,17 @@ if( $_SESSION['role'] != "admin") {
 
   <body>
     <main>
-         <a href="./events_page.php"><button> Retour </button></a>
+         <a href="./events.php"><button> Retour </button></a>
         <h1 style="text-align: center;"> Créer un event </h1>
         <div class="formulaire">
-            <form action="../config/add_event.php" method="post">
-                <p>Titre : <input type="text" name="title" /></p>
+            <form action="../../config/add_event.php" method="post">
+                <p>Title : <input type="text" name="title" /></p>
                 <p>City : <input type="text" name="city" /></p>
                 <p>Date :  <input type="date" name="date" /></p>
-                <p>Prix : <input type="text" name="price" /></p>
+                <p>Price : <input type="text" name="price" /></p>
+                <p>Description : <textarea type="text" name="description"></textarea></p>
                 <p>Image : <input type="text" value="events-images/"name="image" /></p>
-                <p>Nombre de place : <input type="text" name="nbplace" /></p>
+                <p>Number of places : <input type="text" name="nbplace" /></p>
                 <p><input type="submit" /></p>
                 </form>
         </div>

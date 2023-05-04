@@ -1,7 +1,7 @@
 <html>
  <head>
  <meta charset="utf-8">
- <link rel="stylesheet" href="../../css/index.css" media="screen" type="text/css" />
+ <link rel="stylesheet" href="../../css/index.css?=<?php echo time(); ?>" media="screen" type="text/css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
  </head>
  <body style='background:#fff;'>
@@ -9,11 +9,11 @@
 
  <header>
         <div class="topnav">
-            <a class="active" href="./home_connected.php" >Accueil</a>
-            <a href="../events/events_page.php">Events</a>
-            <a href="#contact">Contact</a>
+            <a class="active" href="./home_connected.php" >Home</a>
+            <a href="../events/events.php">Events</a>
+            <a href="#contact">Menu</a>
             <div class="co_button">
-                <a href="../account/account_page.php">Compte</a>
+                <a href="../account/account_page.php"><i class="bi bi-person-circle fa-2x"></i></a>
             </div>
           </div>
 </header>
