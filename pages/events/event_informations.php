@@ -1,8 +1,9 @@
 <html>
  <head>
  <meta charset="utf-8">
- <link rel="stylesheet" href="../../css/event_informations.css?v=<?php echo time(); ?>">
-<link rel="stylesheet" href="../../css/index.css" media="screen" type="text/css" /> </head>
+ <link rel="stylesheet" href="../../css/event_informations.css?=<?php echo time(); ?>">
+<link rel="stylesheet" href="../../css/index.css?=<?php echo time(); ?>" media="screen" type="text/css" /> </head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
  <body style='background:#fff;'>
  <div id="content">
 
@@ -33,6 +34,9 @@ if (isset($_GET['id_event'])) {
     $stmt = $pdo->prepare('SELECT * FROM event WHERE id_event = ?');
     $stmt->execute([$_GET['id_event']]);
     $product = $stmt->fetch(PDO::FETCH_ASSOC);
+    if($product){
+
+    
 ?>
 	<div class="card">
         <img src="<?=$product["image_event"]?>" class="image">
@@ -54,14 +58,14 @@ if (isset($_GET['id_event'])) {
             } 
             ?>
 	</div>
-
-
-
 </main>
-    <?php 
-    
+<?php 
+    }
+    else {
+        header('Location: ./events.php');
+    }
 } else {
-    exit('Product does not exist!');
+    header('Location: ./events.php');
 }
 }
 
