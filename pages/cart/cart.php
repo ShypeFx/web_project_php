@@ -49,7 +49,11 @@ if (isset($_GET['clear_cart'])) {
         <div class="topnav">
             <a href="../home/home_connected.php" >Home</a>
             <a href="../events/events.php">Events</a>
-            <a href="#contact">Admin</a>
+            <a href="../ordersorders.php">Orders <i class="bi bi-box-fill"></i></a>
+            <?php if($_SESSION['role'] == "admin"){
+                echo '<a href="../admin/admin_command.php">Admin</a>';
+            }
+            ?>
             <div class="co_button">
                 <a href="../account/account_page.php"><i class="bi bi-person-circle fa-2x"></i></a>
                 <a class="active" href="cart.php"><i class="bi bi-cart3"></i></a>

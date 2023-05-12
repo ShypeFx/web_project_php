@@ -19,7 +19,11 @@ if( isset($_SESSION['logged-in']) != true) {
         <div class="topnav">
             <a href="../home/home_connected.php" >Home</a>
             <a class="active" href="./events.php">Events</a>
-            <a href="#contact">Admin</a>            
+            <a href="../orders/orders.php">Orders <i class="bi bi-box-fill"></i></a>
+            <?php if($_SESSION['role'] === "admin"){
+                echo '<a href="../admin_command.php">Admin</a>';
+            }
+            ?>          
             <div class="co_button">
                 <a href="../account/account_page.php"><i class="bi bi-person-circle fa-2x"></i></a>
                 <a href="../cart/cart.php"><i class="bi bi-cart3"></i></a>

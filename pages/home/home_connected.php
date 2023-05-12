@@ -1,3 +1,12 @@
+<?php
+session_start();
+include('../../config/inactive_disconnect.php');
+if( isset($_SESSION['logged-in']) != true) {
+    header('Location: ../../config/logout.php');
+}else{
+?>
+
+
 <html>
  <head>
  <meta charset="utf-8">
@@ -12,7 +21,11 @@
         <div class="topnav">
             <a class="active" href="./home_connected.php" >Home</a>
             <a href="../events/events.php">Events</a>
-            <a href="#contact">Admin</a>
+            <a href="../order/orders.php">Orders <i class="bi bi-box-fill"></i></a>
+            <?php if($_SESSION['role'] == "admin"){
+                echo '<a href="../admin/admin_command.php">Admin</a>';
+            }
+            ?>
             <div class="co_button">
                 <a href="../account/account_page.php"><i class="bi bi-person-circle fa-2x"></i></a>
                 <a href="../cart/cart.php"><i class="bi bi-cart3"></i></a>
@@ -20,13 +33,7 @@
           </div>
 </header>
 
-<?php
-session_start();
-include('../../config/inactive_disconnect.php');
-if( isset($_SESSION['logged-in']) != true) {
-    header('Location: ../../config/logout.php');
-}else{
-?>
+
 
 <div class="container">
     <h1>EventBride.com</h1>

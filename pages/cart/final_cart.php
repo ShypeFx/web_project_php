@@ -17,7 +17,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Préparer la requête SQL pour insérer la commande dans la table "commande"
-    $stmt = $conn->prepare('INSERT INTO commande (id_event, id_user, command_name, quantity, price, date_time) VALUES (:id_event, :id_user, :command_name, :quantity, :price, :date_time)');
+    $stmt = $conn->prepare('INSERT INTO commande (id_event, id_user, commande_name, quantity, price, date_time) VALUES (:id_event, :id_user, :command_name, :quantity, :price, :date_time)');
 
     // Parcourir les articles du panier et insérer les valeurs dans la table "commande"
     foreach ($_SESSION['cart'] as $item) {
@@ -54,7 +54,7 @@ try {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Finaliser la commande</title>
+    <title>Thanks you for your order !</title>
 </head>
 <body>
     <h1>Finaliser la commande</h1>
