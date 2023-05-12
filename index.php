@@ -14,6 +14,7 @@
             <a class="active" href="./index.php">Accueil</a>
             <a href="#oui">Informations</a>
             <a href="#contact">Contact</a>
+            <a href="#contact">Ville</a>
             <div class="co_button">
                 <a href="./pages/home/login_page.php">Connexion</a>
             </div>

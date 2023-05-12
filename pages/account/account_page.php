@@ -21,6 +21,7 @@ if( isset($_SESSION['logged-in']) != true) {
             <a href="#contact">Menu</a>
             <div class="co_button">
                 <a class="active" href="./account_page.php"><i class="bi bi-person-circle fa-2x"></i></a>
+                <a href="../cart/cart.php"><i class="bi bi-cart3"></i></a>
             </div>
           </div>
 </header>
@@ -35,6 +36,7 @@ if( isset($_SESSION['logged-in']) != true) {
                          "</h1><h1> Name: " . $row["name"]. 
                          "</h1><h1> Email: " . $row["email"]. 
                          "</h1><h1> Username: " . $row["username"] ."</h1>";
+                         echo '<a href="../../config/logout.php"><button class="button">Déconnexion</button></a>';
                 }
             } else {
                 echo "0 results";

@@ -1,11 +1,11 @@
 <html>
- <head>
- <meta charset="utf-8">
- <link rel="stylesheet" href="../../css/event_informations.css?=<?php echo time(); ?>">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../css/event_informations.css?=<?php echo time(); ?>">
 <link rel="stylesheet" href="../../css/index.css?=<?php echo time(); ?>" media="screen" type="text/css" /> </head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
- <body style='background:#fff;'>
- <div id="content">
+<body style='background:#fff;'>
+<div id="content">
 
 <?php
 session_start();
@@ -25,6 +25,7 @@ if( isset($_SESSION['logged-in']) != true) {
             <a href="#contact">Menu</a>
             <div class="co_button">
                 <a href="../account/account_page.php"><i class="bi bi-person-circle fa-2x"></i></a>
+                <a href="../cart/cart.php"><i class="bi bi-cart3"></i></a>
             </div>
           </div>
 </header>
@@ -41,16 +42,17 @@ if (isset($_GET['id_event'])) {
 	<div class="card">
         <img src="<?=$product["image_event"]?>" class="image">
         <div class="container">
-            <h2>Artiste : <?=$product["name_event"]?></h2>
+            <h2><?=$product["name_event"]?></h2>
             <p><strong>Description : </strong><?=$product["description"]?></p>
-		    <p><strong>Ville : </strong><?=$product["city"]?></p>
-		    <p><strong>Prix : </strong><?=$product["price"]?>€</p>
-            <p><strong> Place disponible : </strong>
+		    <p><strong>City : </strong><?=$product["city"]?></p>
+		    <p><strong>Price : </strong><?=$product["price"]?>€</p>
+            <p><strong> Available places : </strong>
                 <span style="color: green"><?=$product["nb_place_left"]?></span> /
                 <span style="color: red"><?=$product["nb_place_available"]?></span>
+            <p><strong>Date : </strong><?=$product["date_event"]?></p>
         </div>
 
-            <a href="../../config/buy_event.php?id_event=<?=$_GET['id_event']?>" class="btn-buy">Buy</button></a>
+            <a href="../../config/add_to_cart.php?id_event=<?=$_GET['id_event']?>" class="btn-buy">Buy</button></a>
             <?php if($_SESSION['role'] === "admin"){ ?>
                 <a href="./update_event_page.php?id_event=<?=$_GET['id_event']?>" class="btn-update">Update</button></a>
                 <a href="../../config/delete_event.php?id_event=<?=$_GET['id_event']?>" class="btn-delete">Delete</button></a>

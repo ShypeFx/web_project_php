@@ -2,20 +2,20 @@
   include('./database.php');
   include('./inactive_disconnect.php');
   
-  
-  $pdo = pdo_connect_mysql();
+  $id_event = $_GET['id_event'];
 
-  if (isset($_GET['id_event'])) {
-    $stmt = $pdo->prepare('DELETE FROM event WHERE id_event = ?');
-    $stmt->execute([$_GET['id_event']]);
-    $product = $stmt->fetch(PDO::FETCH_ASSOC);
+  $title = $_POST['title'];
+  $city = $_POST['city'];
+  $date = $_POST['date'];
+  $description = $_POST['description'];
+  $price= $_POST['price'];
 
-    if ($result) {
-        header('Location: ../pages/events/events_informations.php?action=deleted');
-        echo 'Event supprimé';
+  $sql = "UPDATE event SET name_event = '$title', city = '$city', date_event = '$date', price = '$price', description = '$description'  WHERE id_event = '$id_event'";
+    
+    if ($conn->query($sql) === TRUE) {
+        header('Location: ../pages/events/event_informations.php?id_event='.$_GET['id_event'].'');    
     } else {
-        header('Location: ../pages/events/events_informations.php?action=deleted');
-        }
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
 ?>

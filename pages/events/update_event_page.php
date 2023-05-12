@@ -28,12 +28,12 @@ if( $_SESSION['role'] != "admin") {
          <a href="./event_informations.php?id_event=<?=$_GET['id_event']?>"><button> Back </button></a>
         <h1 style="text-align: center;"> Update the event </h1>
         <div class="formulaire">
-            <form action="../../config/update_event.php" method="post">
-                <p> Title : <input value="<?=$product["name_event"]?>"></p>
-                <p> Description : <input value="<?=$product["description"]?>"></p>
-                <p> City : <input value="<?=$product["city"]?>"></p>
-                <p> Price : <input value="<?=$product["price"]?>"></p>
-                <p> Date : <input value="<?=$product["date_event"]?>"></p>
+            <form action="../../config/update_event.php?id_event=<?=$_GET['id_event']?>" method="post">
+                <p> Title : <input value="<?=$product["name_event"]?>" name="title"></p>
+                <p> Description : <input value="<?=$product["description"]?>" name="description"></p>
+                <p> City : <input value="<?=$product["city"]?>" name="city"></p>
+                <p> Price : <input value="<?=$product["price"]?>" name="price"></p>
+                <p> Date : <input value="<?=$product["date_event"]?>" name="date"></p>
                 <p><input type="submit"/></p>
                 </form>
         </div>

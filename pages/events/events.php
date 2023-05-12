@@ -19,9 +19,11 @@ if( isset($_SESSION['logged-in']) != true) {
         <div class="topnav">
             <a href="../home/home_connected.php" >Home</a>
             <a class="active" href="./events.php">Events</a>
-            <a href="#contact">Menu</a>
+            <a href="#contact">Admin</a>            
             <div class="co_button">
                 <a href="../account/account_page.php"><i class="bi bi-person-circle fa-2x"></i></a>
+                <a href="../cart/cart.php"><i class="bi bi-cart3"></i></a>
+            </div>
             </div>
           </div>
 </header>

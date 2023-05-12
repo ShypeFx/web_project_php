@@ -49,11 +49,11 @@ body {
 
 .card__title {
   font-size: 2rem;
-
+  color: rgb(0, 0, 0);
 
 }
 .card__description {
-
+  color: rgb(156, 156, 156);
   line-height: 1.6em;
 }
 .button {

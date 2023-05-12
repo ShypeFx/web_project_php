@@ -3,7 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-<link rel="stylesheet" href="../../css/cards.css">
+<link rel="stylesheet" href="../../css/cards.css?=<?php echo time(); ?>">
 </head>
 <body>
 
@@ -30,8 +30,8 @@ if (!empty($product_array)) {
             <img src="<?php echo $product_array[$key]["image_event"]; ?>">
         </figure>
         <main class="card__description">
-            <p class="card-text"><i class="bi bi-tags"></i><?php echo " à partir de ".$product_array[$key]["price"] . "€"; ?></p>
-            <p class="card-text"><i class="bi bi-geo"></i><?php echo " " .$product_array[$key]["city"];?></p>
+            <p class="card-text"><strong><i class="bi bi-tags"></i></strong><?php echo " à partir de ".$product_array[$key]["price"] . "€"; ?></p>
+            <p class="card-text"><strong><i class="bi bi-geo"></i></strong><?php echo " " .$product_array[$key]["city"];?></p>
         </main>
         <form method="POST">
             <a href="event_informations.php?id_event=<?=$product_array[$key]['id_event']?>" class="button">Accéder aux places</a>
