@@ -17,12 +17,14 @@ if (isset($_GET['id_event'])) {
         $product_name = $row['name_event'];
         $product_price = $row['price'];
         $quantity = 1;
+        $nb_place_left = $row['nb_place_left'];
         // Put data in the session
         $item = array(
             'id' => $product_id,
             'name' => $product_name,
             'price' => $product_price,
-            'quantity' => $quantity
+            'quantity' => $quantity,
+            'nb_place_left' => $nb_place_left
         );
 
         $_SESSION['cart'][] = $item;

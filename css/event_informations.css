@@ -119,3 +119,19 @@
   border-radius: 50px;
 }
 
+.btn-soldout {
+  background-color: #ff5e00;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: auto;
+  padding: 10px 20px 10px;
+  align-self: flex-end;
+  float: right;
+  text-decoration:none;
+  margin-right: 10px;
+  min-width: 61px;
+}
+

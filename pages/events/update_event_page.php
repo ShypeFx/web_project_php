@@ -34,6 +34,8 @@ if( $_SESSION['role'] != "admin") {
                 <p> City : <input value="<?=$product["city"]?>" name="city"></p>
                 <p> Price : <input value="<?=$product["price"]?>" name="price"></p>
                 <p> Date : <input value="<?=$product["date_event"]?>" name="date"></p>
+                <p> Available Places : <input value="<?=$product["nb_place_available"]?>" name="nb_available"></p>
+                <p> Left Places : <input value="<?=$product["nb_place_left"]?>" name="nb_left"></p>
                 <p><input type="submit"/></p>
                 </form>
         </div>

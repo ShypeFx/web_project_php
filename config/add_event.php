@@ -13,7 +13,7 @@ include('database.php');
 
     
     $sql = "INSERT INTO event (id_user, name_event, city, date_event, price, description, image_event, nb_place_available, nb_place_left )
-    VALUES ( '$id_user', '$title', '$city ', '$date', '$price', '$description', '$image', '$nbplace',0)";
+    VALUES ( '$id_user', '$title', '$city ', '$date', '$price', '$description', '$image', '$nbplace','$nbplace')";
     
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";

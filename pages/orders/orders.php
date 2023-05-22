@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('../../config/database.php');
+include('../../config/inactive_disconnect.php');
 
 // Vérifier si l'utilisateur est connecté
 if (!isset($_SESSION['id_user'])) {
@@ -43,14 +44,15 @@ try {
         <div class="topnav">
             <a href="../home/home_connected.php" >Home</a>
             <a href="../events/events.php">Events</a>
-            <a class="active" href="orders.php">Orders <i class="bi bi-box-fill"></i></a>
+            <a class="active"  href="orders.php">Orders <i class="bi bi-box-fill"></i></a>
             <?php if($_SESSION['role'] == "admin"){
                 echo '<a href="../admin/admin_command.php">Admin</a>';
             }
             ?>
+            <img src="../../images/logo_menu.png" class="img-menu">
             <div class="co_button">
                 <a href="../account/account_page.php"><i class="bi bi-person-circle fa-2x"></i></a>
-                <a href="cart.php"><i class="bi bi-cart3"></i></a>
+                <a href="../cart/cart.php"><i class="bi bi-cart3"></i></a>
             </div>
           </div>
 </header>
@@ -77,7 +79,7 @@ try {
                     <tr>
                         <td><?php echo $order['id_commande']; ?></td>
                         <td><?php echo $order['commande_name']; ?></td>
-                        <td><?php echo $order['price']; ?></td>
+                        <td><?php echo $order['price'] ."€"; ?></td>
                         <td><?php echo $order['quantity']; ?></td>
                         <td><?php echo $order['date_time']; ?></td>
                     </tr>

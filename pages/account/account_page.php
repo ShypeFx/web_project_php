@@ -18,11 +18,12 @@ if( isset($_SESSION['logged-in']) != true) {
         <div class="topnav">
             <a  href="../home/home_connected.php" >Home</a>
             <a href="../events/events.php">Events</a>
-            <a href="../ordersorders.php">Orders <i class="bi bi-box-fill"></i></a>
+            <a href="../orders/orders.php">Orders <i class="bi bi-box-fill"></i></a>
             <?php if($_SESSION['role'] == "admin"){
                 echo '<a href="../admin/admin_command.php">Admin</a>';
             }
             ?>
+            <img src="../../images/logo_menu.png" class="img-menu">
             <div class="co_button">
                 <a class="active" href="./account_page.php"><i class="bi bi-person-circle fa-2x"></i></a>
                 <a href="../cart/cart.php"><i class="bi bi-cart3"></i></a>

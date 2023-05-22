@@ -22,11 +22,12 @@ if( isset($_SESSION['logged-in']) != true) {
         <div class="topnav">
             <a href="../home/home_connected.php" >Home</a>
             <a class="active" href="./events.php">Events</a>
-            <a href="../ordersorders.php">Orders <i class="bi bi-box-fill"></i></a>
+            <a href="../orders/orders.php">Orders <i class="bi bi-box-fill"></i></a>
             <?php if($_SESSION['role'] == "admin"){
                 echo '<a href="../admin_command.php">Admin</a>';
             }
             ?>
+            <img src="../../images/logo_menu.png" class="img-menu">
             <div class="co_button">
                 <a href="../account/account_page.php"><i class="bi bi-person-circle fa-2x"></i></a>
                 <a href="../cart/cart.php"><i class="bi bi-cart3"></i></a>
@@ -55,8 +56,14 @@ if (isset($_GET['id_event'])) {
                 <span style="color: red"><?=$product["nb_place_available"]?></span>
             <p><strong>Date : </strong><?=$product["date_event"]?></p>
         </div>
-
-            <a href="../../config/add_to_cart.php?id_event=<?=$_GET['id_event']?>" class="btn-buy">Buy</button></a>
+        <?php if($product["nb_place_left"] > 1){ ?>
+            <a href="../../config/add_to_cart.php?id_event=<?$_GET['id_event']?>" class="btn-buy">Buy</button></a>
+        <?php
+        }else{
+            echo '<a class="btn-soldout">Sold Out</button></a>';
+        }
+        ?>
+            
             <?php if($_SESSION['role'] === "admin"){ ?>
                 <a href="./update_event_page.php?id_event=<?=$_GET['id_event']?>" class="btn-update">Update</button></a>
                 <a href="../../config/delete_event.php?id_event=<?=$_GET['id_event']?>" class="btn-delete">Delete</button></a>
