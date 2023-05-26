@@ -12,10 +12,16 @@ if( isset($_SESSION['logged-in']) != true) {
  <meta charset="utf-8">
   <link rel="stylesheet" href="../../css/home.css?=<?php echo time(); ?>" media="screen" type="text/css" /> 
   <link rel="stylesheet" href="../../css/index.css?=<?php echo time(); ?>" media="screen" type="text/css" /> 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="icon" href="../../images/logo_header.png">
  </head>
  <body style='background:#fff;'>
  <div id="content">
+  
+
+ <head>
+    <title>Tickesme</title>
+</head>
 
 <header>
         <div class="topnav">
@@ -23,7 +29,7 @@ if( isset($_SESSION['logged-in']) != true) {
             <a href="../events/events.php">Events</a>
             <a href="../orders/orders.php">Orders <i class="bi bi-box-fill"></i></a>
             <?php if($_SESSION['role'] == "admin"){
-                echo '<a href="../admin_command.php">Admin</a>';
+                echo '<a href="../admin/admin_command.php">Admin</a>';
             }
             ?>
             <img src="../../images/logo_menu.png" class="img-menu">
@@ -34,69 +40,62 @@ if( isset($_SESSION['logged-in']) != true) {
           </div>
 </header>
 
-<style>
-    .carousel {
-      width: 400px;
-      height: 300px;
-      position: relative;
-      overflow: hidden;
-    }
 
-    .carousel img {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      transition: opacity 1s ease-in-out;
-    }
 
-    @keyframes imageAnimation {
-      0% {
-        opacity: 0;
-      }
-      20% {
-        opacity: 1;
-      }
-      33% {
-        opacity: 1;
-      }
-      53% {
-        opacity: 0;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="carousel">
-    <img src="../../images/image_test.jpg" alt="Image 1">
-    <img src="../../images/tickesme.png" alt="Image 2">
-  </div>
-
-  <script>
-    // Change image every 10 seconds
-    setInterval(changeImage, 10000);
-
-    function changeImage() {
-      var carousel = document.querySelector('.carousel');
-      var currentImage = carousel.querySelector('img:not([style*="opacity: 0"])');
-      var nextImage = currentImage.nextElementSibling || carousel.firstElementChild;
-
-      currentImage.style.animation = 'imageAnimation 10s ease-in-out';
-      nextImage.style.animation = 'imageAnimation 10s ease-in-out';
-
-      setTimeout(function() {
-        currentImage.style.opacity = '0';
-        nextImage.style.opacity = '1';
-        currentImage.style.animation = '';
-        nextImage.style.animation = '';
-      }, 1000);
-    }
-  </script>
+<div class="slide-container">
+      <div class="custom-slider fade">
+        <img class="slide-img" src="../../images/welcome_tickesme.jpg">
+      </div>
+      <div class="custom-slider fade">
+        <img class="slide-img" src="../../images/promotion_tickesme.jpg">
+      </div>
+      <div class="custom-slider fade">
+        <img class="slide-img" src="../../images/last_event.jpg">
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div class="slide-dot">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
 
 
 
+<div class="blank-square"></div>
 
 
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
 
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("custom-slider");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
 
 
 

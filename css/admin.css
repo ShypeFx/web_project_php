@@ -1,0 +1,73 @@
+h1 {
+    color: #333;
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table th,
+  table td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #3981cf;
+    color: #fff;
+  }
+  
+  table td {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  /* Styles spécifiques au tableau responsive */
+  @media screen and (max-width: 768px) {
+    table {
+      font-size: 14px;
+    }
+  
+    table th,
+    table td {
+      padding: 5px;
+    }
+  
+    table th {
+      font-size: 16px;
+    }
+  }
+  
+
+.btn-delete {
+    background-color: #ff1100;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: auto;
+    padding: 10px 20px 10px;
+    align-self: flex-end;
+    text-decoration:none;
+  }
+  
+  .btn-update {
+    background-color: #fbb43a;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: auto;
+    padding: 10px 20px 10px;
+    align-self: flex-end;
+    text-decoration:none;
+  }

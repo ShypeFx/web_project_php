@@ -59,7 +59,9 @@ foreach ($_SESSION['cart'] as $item) {
 
 <!DOCTYPE html>
 <html>
+<link rel="icon" href="../../images/logo_header.png">
 <head>
+    
     <title>Thanks you for your order !</title>
     <a href="../events/events.php"><button>Back</button></a>
 </head>

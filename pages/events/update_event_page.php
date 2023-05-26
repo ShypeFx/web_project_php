@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Update Event</title>
     <link rel="stylesheet" href="../../css/update_event.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../images/logo_header.png">
   </head>
 
   <?php

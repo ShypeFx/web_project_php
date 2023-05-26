@@ -1,10 +1,14 @@
 <html>
  <head>
  <meta charset="utf-8">
+ <link rel="icon" href="../../images/logo_header.png">
  <link rel="stylesheet" href="../../css/index.css?=<?php echo time(); ?>" media="screen" type="text/css" /> </head>
  <link rel="stylesheet" href="../../css/event.css?=<?php echo time(); ?>" media="screen" type="text/css" /> </head>
  <body style='background:#fff;'>
  <div id="content">
+ <head>
+    <title>Events</title>
+</head>
 
 <?php
 session_start();
@@ -21,7 +25,7 @@ if( isset($_SESSION['logged-in']) != true) {
             <a class="active" href="./events.php">Events</a>
             <a href="../orders/orders.php">Orders <i class="bi bi-box-fill"></i></a>
             <?php if($_SESSION['role'] === "admin"){
-                echo '<a href="../admin_command.php">Admin</a>';
+                echo '<a href="../admin/admin_command.php">Admin</a>';
             }
             ?>         
             <img src="../../images/logo_menu.png" class="img-menu">
